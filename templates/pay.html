@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A step ahead to enter the battle.</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,600&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'General Sans', sans-serif;
+            font-weight: 300;
+        }
+        #home{
+            opacity: 0;
+            transition: 500ms;
+        }
+        #loading{
+            display: block;
+        }
+        body{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+    opacity: 0;
+    transition: 500ms;
+        }
+        header h2{
+            color: #00d09c;
+        }
+        #content p{
+            color:#333;
+            width: 100%;
+        }
+        form{
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            white-space: nowrap;
+        }
+        footer{
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <p id="loading">Loading...</p>
+    <section id="home">
+        <section id="home_">
+            <header>
+                <h2>A step ahead for the battle</h2>
+            </header>
+            <section id="content">
+                <p>Note : After completing the payment, you will be registered for the game tournament.</p>
+                <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_OSWRVwbr8L0blA" async> </script> </form>
+            </section>
+        </section>
+    </section>
+    <footer>
+        <p>blaze 2024</p>
+    </footer>
+    <script>
+        const loading = document.getElementById("loading");
+        const home = document.getElementById("home");
+        window.addEventListener("load", () => {
+            loading.style.display = "none";
+            home.style.opacity = "1";
+        })
+    </script>
+
+<script src="../static/main.js"></script>
+
+</body>
+</html>

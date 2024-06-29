@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,600&display=swap" rel="stylesheet">
+    <title>Blaze | Home</title>
+    <link rel="stylesheet" href="../static/style_home.css">
+    <script src="https://kit.fontawesome.com/095e9d605c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="title-main">
+        <h2>Blaze</h2>
+    </header>
+    <section id="home">
+        <section>
+            <header class="heading">Choose your game</header>
+        </section>
+        <section id="games">
+            <section id="game">
+                <div id="img">
+                    <img src="../static/imgs/freefire.jpg" alt="">
+                </div>
+                <div id="content">
+                    <h2>Free Fire</h2>
+                    <a href="{{ url_for('game', gamename='ff')}}">Join <i class="fas fa-arrow-alt-circle-right"></i></a>
+                </div>
+            </section>
+            <section id="game">
+                 <div id="img">
+                    <img src="../static/imgs/pubg.jpg" alt="">
+                </div>
+                <div id="content">
+                    <h2>PUBG</h2>
+                    <a href="{{ url_for('game', gamename='pubg')}}">Join <i class="fas fa-arrow-alt-circle-right"></i></a>
+                </div>
+            </section>
+            <section id="game">
+                <div id="img">
+                    <img src="../static/imgs/codm.jpg" alt="">
+                </div>
+                <div id="content">
+                    <h2>Call Of Duty : Mobile</h2>
+                    <a href="{{ url_for('game', gamename='codm')}}">Join <i class="fas fa-arrow-alt-circle-right"></i></a>
+                </div>
+            </section>
+        </section>
+    </section>
+    <section id="profile">
+        <header id="title-content">
+            <h2>Profile  <i class="fas fa-user"></i>
+            </h2>
+        </header>
+        <h2>Name : <span class="name">Shaik Ali</span></h2>
+        <a href="/logout">Log out</a>
+    </section>
+    <footer>
+        <div id="contents">
+            <div id="content">
+                <i class="fas fa-gamepad"></i>
+                <p>games</p>
+            </div>
+            <div class="profile" id="content">
+                <i class="fas fa-user"></i>
+                <p>profile</p>
+            </div>
+            <div id="content" class="contact">
+                <i class="fas fa-phone-alt"></i>
+                <a href="mailto:astrostrax@gmail.com?subject=Contact%20Support&body=I%20want%20to%20contact%20about%20:">contact</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const profile = document.querySelector(".profile")
+        const profile_page = document.querySelector("#profile")
+        profile.addEventListener("click", () => {
+            profile_page.classList.toggle("active");
+        })
+    </script>
+    <script src="../static/main.js"></script>
+
+</body>
+</html>

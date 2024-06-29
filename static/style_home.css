@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'General Sans', sans-serif;
+    box-sizing: border-box;
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    
+    opacity: 0;
+    transition: 500ms;
+}
+header#title-main{
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 13px;
+    border-bottom: 1px solid #b6b6b6;
+    text-transform: uppercase;
+    align-items: center;
+    background: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+header #burger i{
+    font-size: 1.4em;
+}
+section#home
+{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+section#home .heading{
+    text-align: center;
+    padding: 20px;
+    font-size: 2em;
+}
+#home section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#home #games{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+#home #games #game{
+    width: 310px;
+    height: 100%;
+    margin: 30px;
+    overflow: hidden;
+    position: relative;
+}
+#home #games #game #content{
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    padding-left: 20px;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(10px);
+    visibility: hidden;
+    transition: 400ms;
+    padding-top: 20px;
+    border-radius: 10px;
+}
+#home #games #game:hover #content{
+    opacity: 1;
+    transform: translateY(-3px);
+    visibility: visible;
+    background: rgb(0, 0, 0, 0.7);
+}
+#home #games #game #content h2{
+    font-size: 1.2em;
+    margin-bottom: 70px;
+}
+#home #games #game #content a{
+    font-size: 1.1em;
+    padding: 6px 10px 6px 10px;
+    border: 1px solid #006fff;
+    position: absolute;
+    bottom: 23px;
+    text-decoration: none;
+    background: #006fff;
+    letter-spacing: 1px;
+    color: #fff;
+    transition: 200ms;
+}
+
+#home #games #game #content a:hover{
+    background: transparent;
+}
+#home #games #game #img{
+    width: 100%;
+    height: 100%;
+}
+#home #games #game img{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media only screen and (max-width: 768px) {
+    #home #games{
+        flex-direction: column;
+    }
+}
+footer #contents{
+    padding: 8px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    border-top: 1px solid #c3c3c3;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 200;
+}
+#content {
+    display: flex;
+    flex-direction: column;
+}
+footer #contents #content a{
+    padding: 1px;
+    text-decoration: none;
+    color: #222;
+}
+#profile {
+    color: #000;
+    min-height: 100vh;
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    border-right:1px solid #000;
+    background: #fff;
+    transform: translateX(-100vh);
+    transition: 300ms ;
+    padding: 20px;
+}
+#profile a{
+    padding: 10px;
+    background: #00d09c;
+    border: 1px solid #00d09c;
+    border-radius: 10px;
+    position: absolute;
+    top: 95px;
+    text-decoration: none;
+    color: #fff;
+}
+#profile h2{
+    font-size: 1.3em;
+}
+#profile header i{
+    padding: 10px;
+}
+#profile.active{
+    transform: translateX(0);
+}
+#profile #title-content{
+    width: 100%;
+    color: #00d09c;
+}
+#contact{
+    padding: 15px;
+}
+#contact h2{
+    color: #00D09C;
+}
+#greeny{
+    color: #00D09C;
+    padding: 10px;
+}
+#contact form p{
+    margin: 5px;
+    font-size: 1.1em;
+}
+#contact form input{
+    padding: 12px 8px 12px 8px;
+    outline: none;
+    width: calc(100% - 20px);
+    border: 1px solid #838383;
+    margin: 1px;
+    font-size: .8em;
+    letter-spacing: 0.6px;
+}
+#contact form textarea{
+    padding: 10px;
+    outline: none;
+    width: 100%;
+    border: 1px solid #838383;
+    margin: 1px;
+    height: 100px;
+}

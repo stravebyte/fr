@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLAZE-DOMINATION</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/095e9d605c.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header id="logo">
+        <div id="main_logo">
+            <h2>BLAZE</h2>
+        </div>
+    </header>
+    <section id="home">
+        <section id="home_">
+            <div id="text">
+                <h2>India's first gaming showdown</h2>
+                <p>Where gamers from across the india compete the glory.</p>
+                <a href="{{ url_for('login') }}">Get started</a>
+
+            </div>
+            <div id="img_box">
+                <img src="../static/img.png" alt="">
+            </div>
+        </section>
+    </section>
+    <section id="page_1">
+        <section id="page_1_">
+            <header id="title">
+                <h2>What we offer ?</h2>
+            </header>
+            <section id="content">
+                <section id="card">
+                    <h1># 1</h1>
+                    <h2>Exciting Tournamnets</h2>
+                    <p>We host regular tournaments with varying entry fees and prize pools, ensuring that there's always an opportunity for you to shine.</p>
+                </section>
+                <section id="card">
+                    <h1># 2</h1>
+                    <h2>Fair Play</h2>
+                    <p>Our tournaments are governed by strict rules and regulations to ensure a fair and competitive environment for all participants. Everyone can participant.</p>
+                </section>
+                <section id="card">
+                    <h1># 3</h1>
+                    <h2>Exclusive Prizes</h2>
+                    <p>Win cash prizes, gaming gear, or unique in-game items tailored to different tournament levels. We won't let you down—the prizes will surely be incredibly awesome!</p>
+                </section>
+            </section>
+        </section>
+    </section>
+    <section id="faq">
+        <section id="faq_">
+            <header>
+                <h2>FAQS</h2>
+            </header>
+            <div id="content">
+                <div id="q">
+                    <h2>1. What is Blaze Domination?</h2>
+                    <p>Blaze Domination is a competitive event where participants pay an entry fee to compete in skill-based games. Winners receive prizes based on their performance.</p>
+                </div>
+                <div id="q">
+                    <h2>2. Is this tournament considered gambling?</h2>
+                    <p>No, this tournament is not considered gambling. It is a pure skill game where the outcome depends on the player's abilities and strategies, not on chance or luck.</p>
+                </div>
+                <div id="q">
+                    <h2>3. Can I get a refund if I cannot participate after registering?</h2>
+                    <p> Entry fees are generally non-refundable. However, if you have extenuating circumstances, please contact our support team to discuss your situation.</p>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="contact">
+        <section id="contact_">
+            <header id="title_">
+                <h2>Contact Us</h2>
+            </header>
+            <form action="/msg_submit" method="post">
+                <p>Email : </p>
+                <input type="email" placeholder="example@mail.com" required name="email">
+                <p>Message : </p>
+                <textarea name="messagee" id="" required placeholder="type here..."></textarea>
+                <button type="submit">send</button>
+            </form>
+        </section>
+    </section>
+    <footer>
+        <p>© 2024 Shaik Ali. All right reserved.</p>
+    </footer>
+    
+    <script src="../static/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to blaze</title>
+    <link rel="stylesheet" href="../static/style_log.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/095e9d605c.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <section class="home">
+        <section id="home">
+            <form action="/submit_reg" method="post">
+                <header>
+                    <h2><i class="fas fa-user"></i> REGISTER</h2>
+                </header>
+                <input type="text" placeholder="Choose a username"  required  name="uname">
+                <input type="text" id="password" placeholder="New Password" required  name="pwd1">
+                <input type="text" id="password" placeholder="Re-enter password" required  name="pwd2">
+                <input type="email" id="email" placeholder="Email" required aria-label="email" name="email">
+                <input type="number" id="phone" placeholder="WhatsApp Number" required aria-label="whatsapp" name="phone">
+
+                {% if err_user_taken %}
+                <p id="indication">Username/Email already taken.</p>
+                {% endif %}
+
+                {% if err_phone %}
+                <p id="indication">Phone number<br> already exists.</p>
+                {% endif %}
+
+                {% if err_pwd_match %}
+                <p id="indication">Passwords do not match!</p>
+                {% endif %}
+
+                <button type="submit" id="btn">Login</button>
+                <div id="sign">
+                    <p>Already registered? <a href="{{ url_for('login') }}">Login</a></p>
+                </div>
+            </form>
+        </section>
+    </section>
+    <script src="../static/main.js"></script>
+    
+</body>
+</html>
