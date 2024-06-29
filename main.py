@@ -1,9 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 from pymongo import MongoClient
-import os
 
 app = Flask(__name__)
-app.secret_key = os.urandom(24)  # More secure secret key
+app.secret_key = "sup"  # More secure secret key
 
 # Database connection
 connection_string = "mongodb+srv://Stravecodes:ASh2LeaVounah7pu@strave.3nqbbea.mongodb.net/?retryWrites=true&w=majority&appName=Strave"
